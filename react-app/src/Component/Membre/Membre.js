@@ -1,10 +1,9 @@
 import React from 'react'
 
-const Membre = (props) => {
-    const nom = props.nom
-    
+const Membre = ({ nom, age }) => {
+
     return (
-        <h2>Membre de la famille : {nom.toUpperCase()}</h2>
+        <h2>Membre de la famille [ nom : {nom.toUpperCase()} | age : { age } ]</h2>
     )
 }
 
