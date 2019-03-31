@@ -21,7 +21,9 @@ class App extends Component {
                         Learn React
                     </a>
                     <Membre nom='nelu' age='21'/>
-                    <Membre nom='gabriela' age='8'/>
+                    <Membre nom='gabriela' age='8'>
+                        Je suis la soeur de Nelu
+                    </Membre>
                 </header>
             </div>
         )

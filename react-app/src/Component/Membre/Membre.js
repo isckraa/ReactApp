@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
-const Membre = ({ nom, age }) => {
+const Membre = ({ nom, age, children }) => {
 
     return (
-        <h2>Membre de la famille [ nom : {nom.toUpperCase()} | age : { age } ]</h2>
+        <Fragment>
+            <h2>Membre de la famille [ nom : {nom.toUpperCase()} | age : { age } ]</h2>
+            { children ? <p>{ children }</p> : <p>undefined</p>}
+        </Fragment>
     )
 }
 
