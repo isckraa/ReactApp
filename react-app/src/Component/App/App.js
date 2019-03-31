@@ -3,8 +3,25 @@ import logo from '../../logo.svg';
 import './App.css';
 import Membre from '../Membre/Membre';
 
+const famille = {
+    membre1 : {
+        nom : 'nelu',
+        age : 21
+    },
+    membre2 : {
+        nom : 'gabriela',
+        age : 8
+    }
+}
+
 class App extends Component {
+    
+    state = { famille }
+
     render() {
+
+        const { famille } = this.state
+
         return (
             <div className="App">
                 <header className="App-header">
@@ -20,8 +37,8 @@ class App extends Component {
                     >
                         Learn React
                     </a>
-                    <Membre nom='nelu' age='21'/>
-                    <Membre nom='gabriela' age='8'>
+                    <Membre nom={ famille.membre1.nom } age={ famille.membre1.age }/>
+                    <Membre nom={ famille.membre2.nom } age={ famille.membre2.age }>
                         Je suis la soeur de Nelu
                     </Membre>
                 </header>
