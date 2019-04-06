@@ -18,7 +18,12 @@ class App extends Component {
     
     state = { famille }
 
-    handleClick = () => console.log("Click")
+    handleClick = () => {
+        const famille = { ...this.state.famille }
+        famille.membre1.age += 1
+        famille.membre2.age += 1
+        this.setState( { famille })
+    }
 
     render() {
 
