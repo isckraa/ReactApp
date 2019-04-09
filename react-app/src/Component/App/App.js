@@ -26,6 +26,13 @@ class App extends Component {
         this.setState( { famille })
     }
 
+    handleChange = event => {
+        const famille = { ...this.state.famille }
+        const nom = event.target.value
+        famille.membre1.nom = nom
+        this.setState( { famille })
+    }
+
     render() {
 
         const { famille } = this.state
@@ -34,6 +41,7 @@ class App extends Component {
             <div className="App">
                 <header className="App-header">
                     <img src={ logo } className="App-logo" alt="logo" />
+                    <input value = { famille.membre1.nom } onChange = { this.handleChange } type = 'text' /> 
                     <Membre nom={ famille.membre1.nom } age={ famille.membre1.age }/>
                     <Membre nom={ famille.membre2.nom } age={ famille.membre2.age }>
                         Je suis la soeur de Nelu
