@@ -46,7 +46,7 @@ class App extends Component {
                     <Membre nom={ famille.membre2.nom } age={ famille.membre2.age }>
                         Je suis la soeur de Nelu
                     </Membre>
-                    <Button vieillir = { () => this.handleClick(2)} /> 
+                    <Button vieillir = { () => this.handleClick(2) } /> 
                 </header>
             </div>
         )
